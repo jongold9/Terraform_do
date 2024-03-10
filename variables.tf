@@ -3,7 +3,15 @@ variable "do_token" {
 }
 
 variable "ssh_key_path" {
-  description = "Путь к приватному SSH ключу"
+  description = "Путь к публичному SSH ключу"
+}
+
+variable "pvt_key" {
+  description = "Путь к SSH ключу"
+}
+
+variable "ssh_key_fingerprint" {
+  description = "Fingerprint SSH ключа в DigitalOcean"
 }
 
 variable "region" {
@@ -23,5 +31,6 @@ variable "image" {
 
 variable "ssh_key_name" {
   description = "Имя SSH ключа в DigitalOcean"
-  default     = "terraform-key"
+  default     = "cmadmin@v-air.local"
 }
+
