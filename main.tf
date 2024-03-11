@@ -85,6 +85,11 @@ resource "digitalocean_droplet" "ubuntu" {
 
   ssh_keys = [digitalocean_ssh_key.my_ssh_key.id]  # Используем созданный SSH ключ
 }
+# Monitoring Импортируем файл с мониторингом и алертами
+terraform {
+  source = "./monitoring.tf"
+}
+
 
 # Выводим публичные IP адреса созданных droplet'ов
 output "public_ips" {

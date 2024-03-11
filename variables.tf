@@ -33,4 +33,3 @@ variable "ssh_key_name" {
   description = "Имя SSH ключа в DigitalOcean"
   default     = "cmadmin@v-air.local"
 }
-
